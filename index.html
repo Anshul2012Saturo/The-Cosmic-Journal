@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -976,6 +977,96 @@
             const vedicRashi = vedicSign.match(/\(([^)]+)\)/)?.[1];
             const vedicRulingPlanet = rulingPlanets[vedicRashi];
 
+            /* ZODIAC PERSONALITY DETAILS */
+
+            const zodiacTraits = {
+                Aries: {
+                    personality: "Energetic, Competitive, Straightforward",
+                    behaviour: "Bold, Confident, Ambitious",
+                    strengths: "Courageous, Determined, Honest",
+                    weaknesses: "Impatient, Impulsive, Short-tempered"
+                },
+
+                Taurus: {
+                    personality: "Patient, Practical, Reliable",
+                    behaviour: "Calm, Hardworking, Loyal",
+                    strengths: "Responsible, Dedicated, Generous",
+                    weaknesses: "Stubborn, Possessive, Lazy"
+                },
+
+                Gemini: {
+                    personality: "Curious, Intelligent, Adaptable",
+                    behaviour: "Talkative, Social, Playful",
+                    strengths: "Creative, Quick learner, Versatile",
+                    weaknesses: "Restless, Indecisive, Inconsistent"
+                },
+
+                Cancer: {
+                    personality: "Emotional, Caring, Sensitive",
+                    behaviour: "Protective, Helpful, Understanding",
+                    strengths: "Loyal, Compassionate, Imaginative",
+                    weaknesses: "Moody, Overthinking, Insecure"
+                },
+
+                Leo: {
+                    personality: "Bold, Confident, Ambitious",
+                    behaviour: "Friendly, Generous, Leadership-oriented",
+                    strengths: "Creative, Courageous, Determined",
+                    weaknesses: "Proud, Arrogant, Attention-seeking"
+                },
+
+                Virgo: {
+                    personality: "Practical, Analytical, Intelligent",
+                    behaviour: "Organised, Careful, Helpful",
+                    strengths: "Hardworking, Reliable, Observant",
+                    weaknesses: "Overcritical, Perfectionist, Worried"
+                },
+
+                Libra: {
+                    personality: "Charming, Peaceful, Diplomatic",
+                    behaviour: "Friendly, Cooperative, Fair",
+                    strengths: "Kind, Balanced, Understanding",
+                    weaknesses: "Indecisive, People-pleasing, Avoids conflicts"
+                },
+
+                Scorpio: {
+                    personality: "Passionate, Determined, Mysterious",
+                    behaviour: "Focused, Private, Protective",
+                    strengths: "Brave, Loyal, Resourceful",
+                    weaknesses: "Jealous, Secretive, Stubborn"
+                },
+
+                Sagittarius: {
+                    personality: "Adventurous, Optimistic, Independent",
+                    behaviour: "Friendly, Curious, Freedom-loving",
+                    strengths: "Honest, Enthusiastic, Open-minded",
+                    weaknesses: "Impatient, Careless, Overconfident"
+                },
+
+                Capricorn: {
+                    personality: "Disciplined, Practical, Ambitious",
+                    behaviour: "Responsible, Serious, Hardworking",
+                    strengths: "Patient, Determined, Reliable",
+                    weaknesses: "Pessimistic, Stubborn, Work-focused"
+                },
+
+                Aquarius: {
+                    personality: "Independent, Original, Intelligent",
+                    behaviour: "Friendly, Unconventional, Helpful",
+                    strengths: "Innovative, Open-minded, Humanitarian",
+                    weaknesses: "Detached, Unpredictable, Stubborn"
+                },
+
+                Pisces: {
+                    personality: "Imaginative, Compassionate, Gentle",
+                    behaviour: "Kind, Emotional, Helpful",
+                    strengths: "Creative, Caring, Intuitive",
+                    weaknesses: "Over-sensitive, Escapist, Indecisive"
+                }
+            };
+
+            const traits = zodiacTraits[westernRashi];
+
             /* DISPLAY BOTH SIGNS SIDE BY SIDE */
 
             result.innerHTML = `
@@ -1080,6 +1171,30 @@
                             >
                         </div>
 
+                    </div>
+
+                    <div class="info" style="margin-top:20px;">
+                        <h2 style="text-align:center;">✨ Zodiac Personality Details</h2>
+
+                        <div class="info-line">
+                            <b>🌟 Personality:</b><br>
+                            ${traits.personality}
+                        </div>
+
+                        <div class="info-line">
+                            <b>😊 Behaviour:</b><br>
+                            ${traits.behaviour}
+                        </div>
+
+                        <div class="info-line">
+                            <b>💪 Strengths:</b><br>
+                            ${traits.strengths}
+                        </div>
+
+                        <div class="info-line">
+                            <b>⚠️ Weaknesses:</b><br>
+                            ${traits.weaknesses}
+                        </div>
                     </div>
 
                     <p style="font-size:13px;color:#bbb;margin-top:12px;line-height:1.5;">
